@@ -1,0 +1,50 @@
+.me-page { display: flex; flex-direction: column; gap: 12px; }
+
+/* Profile Card */
+.me-profile-card {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 24px 20px; text-align: center;
+}
+.me-avatar { font-size: 2.5rem; margin-bottom: 8px; }
+.me-name { display: block; font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
+.me-stats-row { font-size: 0.82rem; color: var(--text-muted); }
+
+.me-badges {
+  display: flex; gap: 16px; margin-top: 14px;
+}
+.me-badge { text-align: center; }
+.me-badge-val { display: block; font-size: 0.95rem; font-weight: 600; }
+.me-badge-label { font-size: 0.7rem; color: var(--text-muted); }
+
+/* Calorie Grid */
+.me-cal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.me-cal-item {
+  padding: 12px; background: var(--bg-elevated); border-radius: var(--radius-sm);
+}
+.me-cal-item.accent { background: var(--accent-bg); border: 1px solid var(--accent-border); }
+.me-cal-label { display: block; font-size: 0.72rem; color: var(--text-muted); margin-bottom: 2px; }
+.me-cal-val { font-size: 1rem; font-weight: 700; }
+.me-cal-item.accent .me-cal-val { color: var(--accent); }
+
+/* Section Header */
+.me-section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.me-edit-btn { font-size: 0.88rem; color: var(--accent); font-weight: 500; padding: 4px 8px; }
+
+/* Form Grid */
+.me-form-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;
+}
+.me-form-grid .field.full { grid-column: 1 / -1; }
+
+.me-hint { font-size: 0.82rem; color: var(--text-dim); margin-top: 12px; }
+
+/* Settings List */
+.me-settings-list { display: flex; flex-direction: column; }
+.me-setting-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 4px; border-bottom: 1px solid var(--border);
+  cursor: pointer; font-size: 0.92rem; transition: background 0.15s;
+}
+.me-setting-row:last-child { border-bottom: none; }
+.me-setting-row:hover { background: var(--bg-elevated); margin: 0 -4px; padding: 14px 8px; border-radius: var(--radius-xs); }
+.me-setting-val { font-size: 0.85rem; color: var(--text-muted); }

@@ -1,0 +1,127 @@
+.record-page { display: flex; flex-direction: column; gap: 12px; }
+
+.record-date-input {
+  padding: 8px 12px; background: var(--bg-elevated); border: 1.5px solid transparent;
+  border-radius: var(--radius-sm); color: var(--text); font-size: 0.9rem; margin-top: 8px;
+}
+.record-date-input:focus { outline: none; border-color: var(--accent); }
+
+.record-tabs {
+  display: flex; gap: 6px; background: var(--bg-elevated);
+  padding: 4px; border-radius: var(--radius); overflow: hidden;
+}
+.record-tab {
+  flex: 1; padding: 10px 8px; border-radius: var(--radius-sm);
+  font-size: 0.88rem; font-weight: 600; color: var(--text-muted);
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  transition: all 0.2s;
+}
+.record-tab.active { background: var(--bg-card); color: var(--text); box-shadow: var(--shadow-sm); }
+
+.record-section { display: flex; flex-direction: column; gap: 12px; }
+
+.record-sub-title { font-size: 0.82rem; font-weight: 600; color: var(--text-muted); }
+
+/* Diet Progress */
+.diet-progress-bar { padding: 16px 0 8px; }
+.diet-progress-info { margin-bottom: 8px; }
+.diet-progress-consumed { font-size: 1.5rem; font-weight: 800; }
+.diet-progress-target { font-size: 0.9rem; color: var(--text-muted); margin-left: 4px; }
+.diet-bar-track { height: 10px; background: var(--bg-elevated); border-radius: 999px; overflow: hidden; }
+.diet-bar-fill {
+  height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-dim));
+  border-radius: 999px; transition: width 0.4s ease;
+}
+
+.meal-type-row { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.record-action-row { display: flex; gap: 8px; }
+.record-action-row .btn { flex: 1; font-size: 0.88rem; padding: 10px; }
+
+/* Food Picker */
+.food-picker { margin-top: 4px; }
+.food-search-input { margin-bottom: 10px; }
+.food-categories { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.food-categories .chip { font-size: 0.78rem; padding: 5px 10px; }
+.food-list { list-style: none; max-height: 260px; overflow-y: auto; }
+.food-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 11px 4px; border-bottom: 1px solid var(--border); cursor: pointer;
+  transition: background 0.15s;
+}
+.food-item:hover { background: var(--accent-bg); }
+.food-item:last-child { border-bottom: none; }
+.food-name { font-size: 0.9rem; }
+.food-cal { font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+
+/* Record Form */
+.record-form { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+.record-form-actions { display: flex; gap: 8px; }
+.record-form-actions .btn { flex: 1; }
+
+/* Record List */
+.record-list { list-style: none; }
+.record-list-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.record-list-item:last-child { border-bottom: none; }
+.record-item-icon { font-size: 1.1rem; flex-shrink: 0; }
+.record-item-body { flex: 1; min-width: 0; }
+.record-item-title { display: block; font-size: 0.92rem; font-weight: 500; }
+.record-item-sub { display: block; font-size: 0.8rem; color: var(--text-muted); }
+.record-item-cal { font-size: 0.88rem; font-weight: 600; color: var(--accent); white-space: nowrap; }
+.record-item-del {
+  font-size: 0.85rem; color: var(--text-dim); padding: 4px 8px;
+  border-radius: var(--radius-xs); transition: color 0.2s;
+}
+.record-item-del:hover { color: var(--danger); }
+
+/* Exercise */
+.exercise-summary {
+  display: flex; align-items: center; gap: 8px;
+  padding: 16px; background: var(--accent-bg); border-radius: var(--radius);
+  border: 1px solid var(--accent-border);
+}
+.exercise-summary-icon { font-size: 1.3rem; }
+.exercise-summary-val { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+.exercise-summary-unit { font-size: 0.85rem; color: var(--text-muted); }
+
+.quick-exercise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.quick-exercise-btn {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: 12px; background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); text-align: left; transition: all 0.2s;
+}
+.quick-exercise-btn:hover { border-color: var(--accent); }
+.quick-exercise-btn:active { transform: scale(0.97); }
+.qe-name { font-size: 0.88rem; font-weight: 500; }
+.qe-cal { font-size: 0.78rem; color: var(--text-muted); }
+
+/* Weight */
+.weight-existing {
+  padding: 12px 16px; background: var(--accent-bg); border-radius: var(--radius-sm);
+  font-size: 0.88rem; color: var(--accent); border: 1px solid var(--accent-border);
+}
+.weight-form-grid { display: flex; flex-direction: column; gap: 12px; }
+
+/* Coach Feedback Bubble */
+.coach-feedback {
+  background: var(--bg-card); border: 1px solid var(--accent-border);
+  border-radius: var(--radius); padding: 12px 14px; margin-bottom: 4px;
+  border-left: 3px solid var(--accent);
+}
+.coach-feedback.coach-fb-warning { border-left-color: var(--warning); border-color: rgba(221, 107, 32, 0.2); }
+.coach-feedback.coach-fb-milestone { border-left-color: var(--success); border-color: rgba(56, 161, 105, 0.2); }
+
+.coach-fb-header {
+  display: flex; align-items: center; gap: 6px; margin-bottom: 6px;
+}
+.coach-fb-avatar { font-size: 1rem; }
+.coach-fb-name { font-size: 0.78rem; font-weight: 600; color: var(--text-muted); flex: 1; }
+.coach-fb-close { font-size: 0.82rem; color: var(--text-dim); padding: 2px 6px; }
+.coach-fb-close:hover { color: var(--text); }
+
+.coach-fb-body { display: flex; gap: 8px; align-items: flex-start; }
+.coach-fb-icon { font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
+.coach-fb-text { font-size: 0.86rem; line-height: 1.55; color: var(--text); }

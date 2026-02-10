@@ -1,0 +1,14 @@
+.setup-block {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 40vh; padding: 24px; text-align: center;
+}
+.setup-block-text {
+  font-size: 1rem; color: var(--text-muted); line-height: 1.6;
+  margin-bottom: 20px; max-width: 280px;
+}
+.setup-block-btn {
+  display: inline-block; padding: 12px 24px;
+  background: var(--accent); color: #fff; font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+.setup-block-btn:hover { background: var(--accent-dim); }
